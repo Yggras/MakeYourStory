@@ -72,6 +72,10 @@
     <Compile Include="Migrations\201706020816002_ReworkingDatabaseModel.Designer.cs">
       <DependentUpon>201706020816002_ReworkingDatabaseModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706060808070_addMaxLinePropertyToGameModel.cs" />
+    <Compile Include="Migrations\201706060808070_addMaxLinePropertyToGameModel.Designer.cs">
+      <DependentUpon>201706060808070_addMaxLinePropertyToGameModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\Line.cs" />
@@ -92,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706020816002_ReworkingDatabaseModel.resx">
       <DependentUpon>201706020816002_ReworkingDatabaseModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706060808070_addMaxLinePropertyToGameModel.resx">
+      <DependentUpon>201706060808070_addMaxLinePropertyToGameModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

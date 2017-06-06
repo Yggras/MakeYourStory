@@ -13,5 +13,6 @@ namespace DataLayer.Model
         public ICollection<ApplicationUser> Player { get; set; }
         public ApplicationUser Token { get; set; }
         public Story Story { get; set; }
+        public int MaxLines { get; set; }
     }
 }
