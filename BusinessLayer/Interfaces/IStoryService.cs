@@ -12,7 +12,9 @@ namespace BusinessLayer.Interfaces
     public interface IStoryService
     {
         ResponseObject<Story> AddLineToStory(Story story, string line);
+        ResponseObject<Story> AddLineToStory(int storyId, string line);
         ResponseObject<Line> GetLastAppendedLine(Story story);
+        ResponseObject<Line> GetLastAppendedLine(int storyId);
         
     }
 }

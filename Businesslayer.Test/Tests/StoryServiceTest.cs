@@ -1,5 +1,8 @@
-﻿using BusinessLayer;
+﻿using System;
+using System.Linq;
+using BusinessLayer;
 using BusinessLayer.Interfaces;
+using BusinessLayer.Services;
 using DataLayer.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -20,17 +23,46 @@ namespace Businesslayer.Test.Tests
         
 
         [TestMethod]
-        public void GetStoryById()
+        [ExpectedException(typeof(NullReferenceException))]
+        public void AddLineToStory_NullReference_BothArgs()
         {
-            //var storyService = _kernel.Get<IStoryService>();
+            IStoryService service = new StoryService();
 
-            //var mock = new Mock<Story>();
-            //mock.Object.Id = 1;
-            //mock.Object.StoryContent = "Ein Text";
+            service.AddLineToStory(null, null);
+        }
 
-            //var result = storyService.GetStory(1);
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void AddLineToStory_NullReference_Args1()
+        {
+            var mock = new Mock<Story>();
 
-            //Assert.AreEqual(result.StoryContent, mock.Object.StoryContent);
+            IStoryService service = new StoryService();
+
+            service.AddLineToStory(mock.Object, null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void AddLineToStory_NullReference_Args2()
+        {
+            IStoryService service = new StoryService();
+
+            service.AddLineToStory(null, "TestLine");
+        }
+
+        [TestMethod]
+        public void AddLineToStory_AcceptTest()
+        {
+            var mock = new Mock<Story>();
+            
+            IStoryService service = new StoryService();
+
+            var data = service.AddLineToStory(mock.Object, "TestLine");
+
+            var line = mock.Object.Lines.First(x => x.Content == "TestLine");
+
+            Assert.AreEqual(line, data.Data.Lines.First(x => x.Content == "TestLine"));
         }
     }
 }
