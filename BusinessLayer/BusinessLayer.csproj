@@ -63,11 +63,16 @@
   <ItemGroup>
     <Compile Include="DbRepository\DbRepo.cs" />
     <Compile Include="Interfaces\IDbRepo.cs" />
+    <Compile Include="Interfaces\IGameService.cs" />
     <Compile Include="Ninjas\Ninja.cs" />
     <Compile Include="Ninjection.cs" />
     <Compile Include="Interfaces\IStoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="ResponseObject\ResponseObject.cs" />
+    <Compile Include="Services\GameService.cs" />
     <Compile Include="Services\StoryService.cs" />
+    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

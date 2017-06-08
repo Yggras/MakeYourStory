@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer.ResponseObject;
+using DataLayer;
 using DataLayer.Model;
 
 namespace BusinessLayer.Interfaces
 {
     public interface IStoryService
     {
-        Story GetStory(int storyId);
+        ResponseObject<Story> AddLineToStory(Story story);
+        ResponseObject<Line> GetLastAppendedLine(Story story);
+        
     }
 }

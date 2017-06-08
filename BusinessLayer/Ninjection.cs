@@ -18,6 +18,8 @@ namespace BusinessLayer
         {
             Bind<IStoryService>().To<StoryService>();
             Bind<IDbRepo>().To<DbRepo>();
+            Bind<IUserService>().To<UserService>();
+            Bind<IGameService>().To<GameService>();
         }
 
         public static IKernel CreateKernel()
