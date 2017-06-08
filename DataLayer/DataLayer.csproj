@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IdentityModels.cs" />
+    <Compile Include="Model\Identity.cs" />
     <Compile Include="Migrations\201706010538155_AddStoryTable.cs" />
     <Compile Include="Migrations\201706010538155_AddStoryTable.Designer.cs">
       <DependentUpon>201706010538155_AddStoryTable.cs</DependentUpon>

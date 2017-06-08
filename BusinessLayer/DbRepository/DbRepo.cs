@@ -10,7 +10,7 @@ namespace BusinessLayer.DbRepository
 {
     public class DbRepo : IDbRepo
     {
-
+        public StoryContext Context { get; private set; }
         public DbRepo()
         {
             Context = GetContext();
@@ -27,6 +27,6 @@ namespace BusinessLayer.DbRepository
         }
 
 
-        public StoryContext Context { get; private set; }
+        
     }
 }
