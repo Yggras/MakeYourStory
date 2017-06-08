@@ -11,8 +11,8 @@ namespace BusinessLayer.Interfaces
 {
     public interface IStoryService
     {
-        ResponseObject<Story> AddLineToStory(Story story);
-        ResponseObject<Line> GetLastAppendedLine(Story story);
+        ResponseObject<Story> AddLineToStory(Story story, string line);
+        ResponseObject<Line> GetLastAppendedLine(Story story, string line);
         
     }
 }

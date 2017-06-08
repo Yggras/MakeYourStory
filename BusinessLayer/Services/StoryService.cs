@@ -18,12 +18,12 @@ namespace BusinessLayer.Services
         }
 
 
-        public ResponseObject<Story> AddLineToStory(Story story)
+        public ResponseObject<Story> AddLineToStory(Story story, string line)
         {
             throw new NotImplementedException();
         }
 
-        public ResponseObject<Line> GetLastAppendedLine(Story story)
+        public ResponseObject<Line> GetLastAppendedLine(Story story, string line)
         {
             throw new NotImplementedException();
         }

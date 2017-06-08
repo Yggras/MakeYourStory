@@ -10,10 +10,11 @@ namespace BusinessLayer.Interfaces
     {
         ResponseObject<ICollection<Story>> GetStoryHistoryForUser(int userId);
         ResponseObject<ICollection<Story>> GetStoryHistoryForUser(ApplicationUser user);
-        ResponseObject<ICollection<Story>> GetActiveStoriesForUser(int userId);
-        ResponseObject<ICollection<Story>> GetActiveStoriesForUser(ApplicationUser user);
+        ResponseObject<ICollection<Game>> GetActiveGamesForUser(int userId);
+        ResponseObject<ICollection<Game>> GetActiveGamesForUser(ApplicationUser user);
         ResponseObject<ICollection<ApplicationUser>> GetFriendsListForUser(int userId);
         ResponseObject<ICollection<ApplicationUser>> GetFriendsListForUser(ApplicationUser user);
-
+        ResponseObject<ICollection<ApplicationUser>> AddFriendToFriendlist(int userId, ApplicationUser friend);
+        ResponseObject<ICollection<ApplicationUser>> AddFriendToFriendlist(ApplicationUser user, ApplicationUser friend);
     }
 }
